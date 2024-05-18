@@ -34,6 +34,7 @@ class DataIngestion:
             # read the data from server
             logging.info("Reading data from SQL database..")
             df = read_database()
+            # df = pd.read_csv(os.path.join('notebook/data', 'raw.csv'))
             logging.info("Data succesfully read from MySQL server.")
 
             os.makedirs(self.data_ingestion_config.data_files_path,
