@@ -9,8 +9,13 @@ import pandas as pd
 from dotenv import load_dotenv
 import pymysql
 import pickle
+import dagshub
 import warnings
 warnings.filterwarnings("ignore")
+
+# connect dagshub & MLFlow!?
+dagshub.init(repo_owner='amukherjee45nalhati',
+             repo_name='mlproject', mlflow=True)
 
 # call load_dotenv() function -> fetches the contents of the .env file
 load_dotenv()
